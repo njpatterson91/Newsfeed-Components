@@ -31,12 +31,12 @@ let menuItems = [
 
   Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
 */
-const menuAttchPoint = document.querySelector(".menu-button");
+const menuAttchPoint = document.querySelector("body");
 function menuMaker(menuArray) {
   //Instantiated elements for component
   const menuDiv = document.createElement("div");
   const unorderedList = document.createElement("ul");
-  menuDiv.classList.add("menu", "menu-open");
+  menuDiv.classList.add("menu");
   //creating structure for component
   menuDiv.appendChild(unorderedList);
   //Loop to create menu items
@@ -48,13 +48,13 @@ function menuMaker(menuArray) {
       return unorderedList;
     });
   }
-  menuAttchPoint.addEventListener("click", (event) => {
-    menuDiv.classList.toggle("menu-open");
-  });
   popMenu(menuArray);
+  menuAttchPoint.addEventListener("click", (event) => {
+    menuDiv.classList.toggle("menu--open");
+  });
   return menuDiv;
 }
 
-console.log(menuMaker(menuItems));
+//console.log(menuMaker(menuItems));
 
 menuAttchPoint.appendChild(menuMaker(menuItems));
