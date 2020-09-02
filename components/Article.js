@@ -148,6 +148,10 @@ function articleMaker({
   article1Sect.textContent = firstParagraph;
   article2Sect.textContent = secondParagraph;
   article3Sect.textContent = thirdParagraph;
+  articleSpan.textContent = "+";
+  articleSpan.addEventListener("click", (event) => {
+    articleDiv.classList.toggle("article-open");
+  });
   return articleDiv;
 }
 
