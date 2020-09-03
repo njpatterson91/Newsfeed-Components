@@ -58,3 +58,4 @@ function menuMaker(menuArray) {
 //console.log(menuMaker(menuItems));
 
 menuAttchPoint.appendChild(menuMaker(menuItems));
+

@@ -180,8 +180,10 @@ function articleMaker({
   article1Sect.textContent = firstParagraph;
   article2Sect.textContent = secondParagraph;
   article3Sect.textContent = thirdParagraph;
-  articleSpan.textContent = "+";
-  articleSpan.addEventListener("click", (event) => {
+  //articleSpan.textContent = "+";
+  //updated event listener to act on div over span for asthetics
+  articleDiv.style.cursor = 'pointer'
+  articleDiv.addEventListener("click", (event) => {
     articleDiv.classList.toggle("article-open");
   });
   return articleDiv;
